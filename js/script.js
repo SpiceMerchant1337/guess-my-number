@@ -4,11 +4,6 @@
 // Structured representation of HTML docs. Allows JS to access HTML elements and styles to manipulate them
 // refer to page 69 of theory-lectures-v2.pdf to see more
 
-// NOTE always set the "textContent" from querySelector if you want to change text!
-
-/* document.querySelector(".number").textContent = 13;
-document.querySelector(".score").textContent = 17; */
-
 // vars and functions
 let rngNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
