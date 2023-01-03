@@ -10,11 +10,7 @@
 document.querySelector(".score").textContent = 17; */
 
 // vars and functions
-// to calculate the winning number
-const winningNumber = function () {
-  Math.trunc(Math.random() * 20) + 1;
-};
-let rngNumber = winningNumber();
+let rngNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
 // to change the displayed info message
@@ -59,7 +55,7 @@ document.querySelector(".check").addEventListener("click", function () {
       // When the player runs out of points
     } else {
       displayMessage("💥 Game over!");
-      displayScore(0);
+      document.querySelector(".score").textContent = 0;
     }
   }
 
@@ -103,7 +99,7 @@ document.querySelector(".check").addEventListener("click", function () {
 // sub-task 1: eventListener on click
 document.querySelector(".again").addEventListener("click", function () {
   // sub-task 2: reset values of score and winning number
-  rngNumber = winningNumber();
+  rngNumber = Math.trunc(Math.random() * 20) + 1;
   score = 20;
   displayScore(score);
 
